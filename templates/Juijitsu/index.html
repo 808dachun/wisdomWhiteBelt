@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}Users{% endblock %}
+
+{% block content %}
+
+<h1>Juijitsu Foundational</h1>
+
+<p>"The guiding principle behind ju 'gentle' is the idea of a weaker 'gentler' force overcoming a stronger force through the application of technique, or jitsu, rather than strenght and agression. Reduced to to its core, juijitsu is the employment of intelligence and and skill to overcome brute strength and agression"
+    - John Danher/ Renzo Gracie
+</p> 
+
+<ul>
+    {% for phase in phases %}
+    <li>
+        <a href="/juijitsu/{{phase.name}}">{{phase.name}}</a>
+    </li>
+    {% endfor %}
+</ul>
+
+
+<p><a class="btn btn-sm btn-secondary" href="/juijitsu/phase">Enter the System</a></p>
+
+{% endblock %}

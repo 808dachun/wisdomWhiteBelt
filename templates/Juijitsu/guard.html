@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}Users{% endblock %}
+
+{% block content %}
+
+<h1>Guard</h1>
+<br>
+<p>The guard position is when your back is too the floor, and your hips and legs are between your opponent. It is seen as a defensive position as you are able to use your legs and knees as shields to protect yourself from your opponent's strikes.</p>
+<br>
+<h2>Positions </h2>
+
+<ul>
+    {% for position in positions %}
+        <li>
+           
+            <p>{{position.name}} </p> 
+            <p>{{position.info}}</p>
+        </li>
+    {% endfor %}
+</ul>
+  
+  <p><a class="btn btn-sm btn-secondary" href="/juijitsu /new">Add Position</a></p> ssss
+
+{% endblock %}
+
+  <!-- <a href="/juijitsu/{{position/name}}">{{position.name}}</a>  -->

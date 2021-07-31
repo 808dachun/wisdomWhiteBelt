@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}Users{% endblock %}
+
+{% block content %}
+
+<h1>Take Your Opponent To The Ground</h1>
+
+<p>"The first outlook is that the ground phase is the best place to take a single-combat weaponless fight, since this is where the greatest degree of positiponal control is possible. This is the means by which a fighter can negate an opponent's stricking offense and by which he can set up submissiom hold to allow the fight to brew on efficiently"
+    - John Danaher/ Renzo Gracie    
+</p> 
+<br>
+
+<ul>
+    {% for phase in phases %}
+        <li>
+            <a href="/juijitsu/{{phase.name}}">{{phase.name}}</a> <br>
+            <p>{{phase.info}}</p>
+        </li>
+    {% endfor %}
+</ul>
+
+<p><a class="btn btn-sm btn-secondary" href="/juijitsu/phase">Enter the System</a></p>
+
+{% endblock %}

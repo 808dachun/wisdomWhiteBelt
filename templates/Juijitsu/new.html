@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Create User
+{% endblock %}
+
+{% block content %}
+
+<h1>Create a Position</h1>
+<form method="POST">
+
+  <div class="form-group row">
+    <label for="name" class="col-sm-2 col-form-label">Name</label>
+    <div class="col-sm-10">
+      <input type="text"
+             class="form-control"
+             id="name"
+             name="name"
+             placeholder="Enter Name of Position">
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <label for="info" class="col-sm-2 col-form-label">Description of Position</label>
+    <div class="col-sm-10">
+      <input type="text"
+             class="form-control"
+             id="info"
+             name="info"
+             placeholder="Enter Description of Position">
+    </div>
+  </div>
+
+
+  <div class="form-group row">
+    <div class="ml-auto mr-3">
+      <button type="submit" class="btn btn-success">Add</button>
+    </div>
+  </div>
+
+</form>
+
+{% endblock %}
